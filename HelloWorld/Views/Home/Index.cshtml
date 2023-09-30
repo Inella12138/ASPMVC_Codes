@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    int x = 2;
+}
+
+@if (x == 1)
+{
+    @:x is 1;
+}
+else if(x == 2)
+{
+    <b>x = 2</b>
+}
+else
+{
+    @: x is @x
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

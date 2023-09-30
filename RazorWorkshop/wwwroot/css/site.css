@@ -1,0 +1,32 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+td,th{
+    border: 1px solid #0060ff;
+    text-align: center;
+    padding: 8px;
+}
+
+.M_row{
+    background-color: #f5fdff
+}
+
+.F_row{
+    background-color: #fff3f3
+}

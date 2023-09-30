@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "PersonList";
+}
+<h1>@ViewData["Title"]</h1>
+
+@{
+    var persons = ViewBag.persons;
+    string err = ViewBag.err;
+}
+@if (err == "")
+{
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>JobTitle</th>
+            <th>Gender</th>
+        </tr>
+
+        @for (int i = 0; i < persons.Count; i++)
+        {
+            var person = persons[i];
+
+            string rowColor = (person.Gender == "M") ? "class = M_row" : "class = F_row";
+
+            <tr @rowColor>
+                <td>@person.Name</td>
+                <td>@person.JobTitle</td>
+                <td>@person.Gender</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>@err</p>
+}
