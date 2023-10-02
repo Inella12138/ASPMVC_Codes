@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    //为了代码看起来整洁点，js脚本和css格式放在wwwroot文件夹下的对应文件夹中
+}
+<script src="~/js/math_qtn.js"></script>
+<link rel="stylesheet" href="~/css/math_qtn.css" />
+
+
+<div id="instruction">Fill in the blank and hit Enter to check your answer.</div>
+
+<font size="30px">
+    <input id="x" size="3"> + <div id="y"></div> = <div id="z"></div>
+</font>
+
+<div id="msg"></div>
+@*<br />
+<h6>Fill in the blank and hit Enter to check your answer.</h6>
+<h1><input id="adder" name="input" style="width:80px;text-align:center" /> + <div id="leftnum"></div> = @y</h1>
+<p style="color:@ViewBag.Color"> @ViewBag.Msg </p>*@
+
+@*<script>
+    window.onload = function(){
+        let input_elem = document.getElementById('adder');
+
+        get_qtn();
+        input_elem.addEventListener('keydown',PressEnter);
+
+        function PressEnter(event){
+            if (event.Keycode === 13||event.Key === 'Enter'){   //检测是否为enter键，enter的键码为13，===表示严格相等（例如==可以将char转换为int和数字比较，但是===不行）
+                if(CheckValidNum(input_elem.value)){
+                    let sentval = new XMLHttpRequest();
+                    sentval.open("POST", "/Math/Check");
+                    //sentval.setRequestHeader("Content-Type","applicaiton/json; charset=utf8");
+                    sentval.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                    //let data = {"Adder":input_elem.value};
+                    //sentval.send(JSON.stringify(data));
+                    sentval.send("input="+input_elem.value);
+                }
+            }
+        }
+
+        function CheckValidNum(input){
+            if (isNaN(input)) {
+                alert("Please enter a valid number!");
+                return false;
+            }
+            const pattern = /^\d+$/;
+            if (!pattern.test(input)){
+                alert("Please enter a valid number!");
+                return false;
+            }
+            return true;
+        }
+    }
+</script>*@

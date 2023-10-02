@@ -1,0 +1,29 @@
+﻿#x {
+    text-align: center;
+}
+/*输入框文本居中*/
+
+#y, #z {
+    display: inline-block;
+}
+/*y和z两个div，用inline-block可以使其显示在同一行，否则会换行*/
+
+#instruction {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*设置页边距*/
+
+#msg {
+    margin-top: 20px;
+}
+
+.correct {
+    color: rgb(22, 115, 22);
+}
+
+.incorrect {
+    color: #972f2f;
+}
+/*通过给msg设置不同的class来改变其字体颜色*/
+/*用别的方法很难将颜色属性传递给html*/
